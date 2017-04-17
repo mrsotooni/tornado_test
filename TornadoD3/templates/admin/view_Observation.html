@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>مشاهده نظرات</title>
+</head>
+<body dir="rtl">
+<center>
+    <font face="B Yekan" size="5px" color="#8a2be2">
+
+    <h10>سلام به صفحه مشاهده نظرات خوش آمدید ! </h10>
+
+    </font>
+</center>
+<h2 class="modal-titlel">
+    <font face="B Yekan" size="5px" color="#8a2be2">
+    مشاهده نظرات :
+        </font>
+</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            <font face="B Yekan" size="3px" color="#8a2be2">
+            شماره
+                </font>
+        </th>
+        <th>
+            <font face="B Yekan" size="3px" color="#8a2be2">
+نام و نام خانوادگی
+                </font>
+        </th>
+        <th>
+            <font face="B Yekan" size="3px" color="#8a2be2">
+           ایمیل
+                </font>
+        </th>
+        <th>
+            <font face="B Yekan" size="3px" color="#8a2be2">
+            اهمیت
+                </font>
+        </th>
+        <th>
+            <font face="B Yekan" size="3px" color="#8a2be2">
+            متن پیشنهاداتی
+                </font>
+        </th>
+
+
+    </tr>
+
+    </thead>
+    <tbody>
+                                {% for item in sgs %}
+                                <tr>
+                                    <td>{{ item['id'] }}</td>
+
+                                    <td>{{ item['name'] }}</td>
+
+                                    <td>{{ item['email'] }}</td>
+
+                                    <td>{{ item['important'] }}</td>
+
+
+                                    <td>{{ item['suggest'] }}</td>
+
+                                    <td><button class="btn-danger" aria-setsize="10px" ></button></td>
+
+                                </tr>
+
+
+                                {% end for %}
+
+
+
+    </tbody>
+</table>
+</body>
+</html>
+
